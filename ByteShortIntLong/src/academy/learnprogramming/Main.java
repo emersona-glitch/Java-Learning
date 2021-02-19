@@ -69,15 +69,46 @@ public class Main {
         // so it's only useful for things that you wanna do that for...
         // char uses 2 bytes in memory
         char myFavoriteChar = 'Q';
-        // character literals baby
+
+        // character literals and an escape-backslash allow you to reference
+        // characters by their unicode code.
         char myLittleUnicodeGuy = '\u0044';
         System.out.println(myLittleUnicodeGuy);
         // Boolean values are true and false like so:
         boolean myBooleanValue = true;
 
+        System.out.println(Long.MAX_VALUE);
+
+        int biggestInt = Integer.MAX_VALUE;
+        long myLongExpression = (long) ((long) (biggestInt) + (long) (biggestInt));
+        System.out.println("Here's the biggest integer " + Integer.MAX_VALUE);
+        System.out.println("Here's a long expression   " + myLongExpression);
 
 
+        // 8 primitive data types:
+        // byte short int long, double float, char, boolean
 
+        // String, is a CLASS, not a data type,
+        // but because of it's importance, it has features in Java
+        // that allow you to use it more easily than other classes.
+        // Strings contain a sequence of characters, limited in size
+        // only by memory, or the MAX_VALUE of int
+        //
+        String myString = "This is a string";
+        System.out.println(myString);
+        // you can append strings with the + operator
 
+        String lastString = "10";
+        int myInt = 50;
+        lastString = lastString + myInt;
+        System.out.println(lastString);
+
+        System.out.println("What happens when we do this " + (660 + 540));
+
+        // string in javascript are immutable,
+        // if you "modify" them, actually, a new string gets created
+        // for this reason, the code on line 103 above is inefficient,
+        // because it forced a new string to be created, and then
+        // the old one deleted, basically.
     }
 }
